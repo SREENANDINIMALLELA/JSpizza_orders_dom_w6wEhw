@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector("#orders_form")
   form.addEventListener('submit',newOrderSubmit)
+  const deleteAllButton = document.querySelector('#delete-all');
+  deleteAllButton.addEventListener('click', handleDeleteAllClick);
 })
 const newOrderSubmit= function(event){
   event.preventDefault();
@@ -30,4 +32,8 @@ const createReadingListItem = function (form) {
   readingListItem.appendChild(quantity);
 
   return readingListItem;
+}
+const handleDeleteAllClick = function (event) {
+  const readingList = document.querySelector('#history');
+  readingList.innerHTML = '';
 }
