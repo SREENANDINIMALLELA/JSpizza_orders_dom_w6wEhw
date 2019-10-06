@@ -1,49 +1,63 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Pizza Orders</title>
-    <script src="js/app.js"></script>
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-    <h1>Pizza orders</h1>
-  </head>
-  <body>
-    <form id="orders_form">
-      <div id="form-wrapper">
-        <div class="orderItem">
-          <label for="name">Name</label>
-          <input type="text" id="name" required/>
-        </div>
-        <div class="orderItem">
-          <label for="pizza-base"> Select Base</label>
-          <select id="base" required>
-            <option value="" disabled selected></option>
-            <option value="thin">Thin crust</option>
-            <option value="regular-crust">Regular Crust</option>
-            <option value="stuffedcrust">Stuffed crust</option>
-          </select>
-        </div>
-        <div class="orderItem">
-          <label for="pizza-toppings">Select Toppings</label>
-          <select id="toppings"  required>
-            <option value="" disabled selected></option>
-            <option value="peppers">Peppers</option>
-            <option value="pineapple">Pineapple</option>
-            <option value="chicken">Chicken</option>
-          </select>
-        </div>
-        <div class="orderItem">
-          <label for="order-quantity">Quantity</label>
-          <input type="number" id = "quantity" required/>
-        </div>
-        <div class="orderItem">
-          <label for="order-quantity">Submit</label>
-          <input type="submit" id = "submit" required/>
-        </div>
+<head>
+  <meta charset="utf-8">
+  <title>Pizza Orders</title>
+  <script src="js/app.js"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+  <h1>Pizza orders</h1>
+</head>
+<body>
+  <form id="orders_form">
+    <div id="form-wrapper">
+      <div class="orderItem">
+        <label for="name">Name</label>
+        <input type="text" id="name" required/>
       </div>
+      <div class="orderItem">
+        <label for="pizza-base"> Select Base</label>
+        <select id="base" required>
+          <option value="" disabled selected></option>
+          <option value="thin">Thin crust</option>
+          <option value="regular-crust">Regular Crust</option>
+          <option value="stuffedcrust">Stuffed crust</option>
+        </select>
+      </div>
+      <div class="orderItem">
+        <label for="pizza-toppings">Select Toppings</label>
+        <select id="toppings"  required>
+          <option value="" disabled selected></option>
+          <option value="peppers">Peppers</option>
+          <option value="pineapple">Pineapple</option>
+          <option value="chicken">Chicken</option>
+        </select>
+      </div>
+      <div class="orderItem">
+        <label for="order-quantity">Quantity</label>
+        <input type="number" id = "quantity" required/>
+      </div>
+      <p>Please select your preferred contact method:</p>
+      <div>
+        <input type="radio" id="contactChoice1"
+        name="contact" value="email">
+        <label for="contactChoice1">Email</label>
+
+        <input type="radio" id="contactChoice2"
+        name="contact" value="phone">
+        <label for="contactChoice2">Phone</label>
+
+        <input type="radio" id="contactChoice3"
+        name="contact" value="mail">
+        <label for="contactChoice3">Mail</label>
+      </div>
+      <div class="orderItem">
+        <label for="order-quantity">Submit</label>
+        <input type="submit" id = "submit" required/>
+      </div>
+    </div>
   </form>
-   <button id="delete-all">Delete All</button>
-<h1>History</h1>
+  <button id="delete-all" type = "delete" >Delete All</button>
+  <h1>History</h1>
   <div id="history"></div>
-  </body>
+</body>
 </html>
