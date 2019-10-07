@@ -6,34 +6,34 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 const newOrderSubmit= function(event){
   event.preventDefault();
-  const readingListItem = createReadingListItem(event.target);
-  const readingList = document.querySelector('#history');
-  readingList.appendChild(readingListItem);
+  const orderListItem = createReadingListItem(event.target);
+  const orderList = document.querySelector('#history');
+  orderList.appendChild(orderListItem);
   event.target.reset();
 }
 
 const createReadingListItem = function (form) {
-  const readingListItem = document.createElement('li');
-  readingListItem.classList.add('reading-list-item');
+  const orderListItem = document.createElement('li');
+  orderListItem.classList.add('history');
   const name = document.createElement('h2');
   name.textContent = `${form.name.value} made an order`;
-  readingListItem.appendChild(name);
+  orderListItem.appendChild(name);
 
   const base = document.createElement('p');
   base.textContent = `with ${form.base.value} base`;
-  readingListItem.appendChild(base);
+  orderListItem.appendChild(base);
 
   const toppings = document.createElement('p');
   toppings.textContent = `with toppings  ${form.toppings.value}`;
-  readingListItem.appendChild(toppings);
+  orderListItem.appendChild(toppings);
 
   const quantity = document.createElement('p');
   quantity.textContent = `with quantity ${form.quantity.value}`;
-  readingListItem.appendChild(quantity);
+  orderListItem.appendChild(quantity);
 
-  return readingListItem;
+  return orderListItem;
 }
 const handleDeleteAllClick = function (event) {
-  const readingList = document.querySelector('#history');
-  readingList.innerHTML = '';
+  const orderList = document.querySelector('#history');
+  orderList.innerHTML = '';
 }

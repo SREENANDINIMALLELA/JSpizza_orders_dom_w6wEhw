@@ -34,7 +34,7 @@ button, input[type="delete"] {
   list-style-type: none;
 }
 
-.reading-list-item {
+.history {
   margin: 0.5rem 0.5rem;
   padding: 0.5rem 0.8rem;
   border: 1px solid #20437c;
